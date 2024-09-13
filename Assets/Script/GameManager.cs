@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    
     public static GameManager Instance { get; private set; }
 // Write down your variables here
+ public int score = 0;
 
     private void Awake()
     {
@@ -14,6 +16,7 @@ public class GameManager : MonoBehaviour
 
     public void IncrementScore()
     {
-
+        score += 1; 
+        Debug.Log("Score: " + score);
     }
 }
